@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Blogul meu {% endblock  %}
+
+
+{% block content %}
+
+    <section class="h2 shadow-lg">
+        <h2>ULTIMELE POSTARI</h2>   
+    </section>
+
+    <section class="latest-posts">
+ 
+        <ul>
+            {% for post in posts %}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+
+
+    
+{% endblock  %}
